@@ -1,0 +1,30 @@
+## specify node version
+FROM quay.io/netguru/ng-node:8 as builder
+
+## add code & build app
+ADD . $APP_HOME
+RUN yarn install
+RUN yarn build:staging
+
+## Real app image
+FROM ruby:2.4.2
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
+RUN mkdir /welcome
+WORKDIR /welcome
+COPY Gemfile /welcome/Gemfile
+COPY Gemfile.lock /welcome/Gemfile.lock
+RUN bundle install
+COPY . /welcome
+
+ENV VIRTUAL_HOST calculator.staging.devguru.co
+ENV VIRTUAL_PORT 3000
+ENV LETSENCRYPT_HOST calculator.staging.devguru.co
+ENV LETSENCRYPT_EMAIL devops-team@netguru.co
+## Copy build/ folder to new image
+COPY --from=builder /app/build /app/dist
+COPY nginx-staging.conf /etc/nginx/nginx.conf
+
+
+
+EXPOSE 3000
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]

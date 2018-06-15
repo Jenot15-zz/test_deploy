@@ -1,0 +1,59 @@
+version: "3.2"
+services:
+  db:
+      image: postgres
+      volumes:
+        - ./tmp/db:/var/lib/postgresql/data
+      networks:
+        - frontend
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.staging
+    command: nginx
+    labels:
+      - netguru.appname=rails_test
+      - netguru.stage=staging
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/welcome
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    hostname: terrafromtest.staging.web
+    networks:
+      - frontend
+  redis:
+    image: redis
+    networks:
+      - frontend
+  sidekiq:
+    build: .
+    command: bundle exec sidekiq
+    volumes:
+     - .:/welcome
+    depends_on:
+     - db
+     - redis
+    env_file:
+     - .env
+    networks:
+     - frontend
+  crono:
+    build: .
+    command: bundle exec crono start
+    volumes:
+     - .:/welcome
+    depends_on:
+     - db
+     - redis
+    env_file:
+     - .env
+    networks:
+     - frontend
+
+networks:
+  frontend:
+    external:
+      name: frontend

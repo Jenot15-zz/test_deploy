@@ -1,0 +1,188 @@
+Creating rails_crono_redis_1 ... 
+Creating rails_crono_db_1    ... 
+[1A[2KCreating rails_crono_db_1    ... [32mdone[0m[1BCreating rails_crono_web_1   ... 
+[1A[2KCreating rails_crono_web_1   ... [32mdone[0m[1B[3A[2KCreating rails_crono_redis_1 ... [32mdone[0m[3BCreating rails_crono_crono_1 ... 
+Creating rails_crono_sidekiq_1 ... 
+[1A[2KCreating rails_crono_sidekiq_1 ... [32mdone[0m[1B[2A[2KCreating rails_crono_crono_1   ... [32mdone[0m[2BAttaching to rails_crono_db_1, rails_crono_web_1, rails_crono_redis_1, rails_crono_sidekiq_1, rails_crono_crono_1
+[32mredis_1    |[0m 1:C 11 Jun 08:30:12.646 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[32mredis_1    |[0m 1:C 11 Jun 08:30:12.647 # Redis version=4.0.9, bits=64, commit=00000000, modified=0, pid=1, just started
+[32mredis_1    |[0m 1:C 11 Jun 08:30:12.647 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[32mredis_1    |[0m 1:M 11 Jun 08:30:12.650 * Running mode=standalone, port=6379.
+[32mredis_1    |[0m 1:M 11 Jun 08:30:12.650 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+[32mredis_1    |[0m 1:M 11 Jun 08:30:12.650 # Server initialized
+[32mredis_1    |[0m 1:M 11 Jun 08:30:12.650 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+[32mredis_1    |[0m 1:M 11 Jun 08:30:12.650 * Ready to accept connections
+[36mdb_1       |[0m 2018-06-11 08:30:17.869 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[36mdb_1       |[0m 2018-06-11 08:30:17.869 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[36mdb_1       |[0m 2018-06-11 08:30:17.878 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[36mdb_1       |[0m 2018-06-11 08:30:18.049 UTC [20] LOG:  database system was shut down at 2018-06-11 08:29:18 UTC
+[36mdb_1       |[0m 2018-06-11 08:30:18.094 UTC [1] LOG:  database system is ready to accept connections
+[33mweb_1      |[0m A server is already running. Check /welcome/tmp/pids/server.pid.
+[33mweb_1      |[0m => Booting Puma
+[33mweb_1      |[0m => Rails 5.2.0 application starting in development 
+[33mweb_1      |[0m => Run `rails server -h` for more startup options
+[33mweb_1      |[0m Exiting
+[35msidekiq_1  |[0m 2018-06-11T08:30:20.471Z 1 TID-7ba71 INFO: Booting Sidekiq 5.1.3 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+[35msidekiq_1  |[0m 2018-06-11T08:30:21.026Z 1 TID-7ba71 INFO: Running in ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-linux]
+[35msidekiq_1  |[0m 2018-06-11T08:30:21.026Z 1 TID-7ba71 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+[35msidekiq_1  |[0m 2018-06-11T08:30:21.026Z 1 TID-7ba71 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+[35msidekiq_1  |[0m 2018-06-11T08:30:21.031Z 1 TID-7ba71 INFO: Starting processing, hit Ctrl-C to stop
+[33mrails_crono_web_1 exited with code 1
+[0m[31mcrono_1    |[0m pid-file for killed process 16 found (/welcome/tmp/pids/crono.pid), deleting.
+[31mcrono_1    |[0m crono: process with pid 18 started.
+[31mrails_crono_crono_1 exited with code 0
+[0m[32mredis_1    |[0m 1:M 11 Jun 08:35:13.095 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 08:35:13.096 * Background saving started by pid 15
+[32mredis_1    |[0m 15:C 11 Jun 08:35:13.105 * DB saved on disk
+[32mredis_1    |[0m 15:C 11 Jun 08:35:13.107 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 08:35:13.200 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 08:40:14.101 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 08:40:14.102 * Background saving started by pid 16
+[32mredis_1    |[0m 16:C 11 Jun 08:40:14.106 * DB saved on disk
+[32mredis_1    |[0m 16:C 11 Jun 08:40:14.107 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 08:40:14.206 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 08:45:15.029 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 08:45:15.029 * Background saving started by pid 17
+[32mredis_1    |[0m 17:C 11 Jun 08:45:15.036 * DB saved on disk
+[32mredis_1    |[0m 17:C 11 Jun 08:45:15.037 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 08:45:15.135 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 08:50:16.030 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 08:50:16.031 * Background saving started by pid 18
+[32mredis_1    |[0m 18:C 11 Jun 08:50:16.034 * DB saved on disk
+[32mredis_1    |[0m 18:C 11 Jun 08:50:16.034 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 08:50:16.132 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 08:55:17.090 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 08:55:17.091 * Background saving started by pid 19
+[32mredis_1    |[0m 19:C 11 Jun 08:55:17.098 * DB saved on disk
+[32mredis_1    |[0m 19:C 11 Jun 08:55:17.098 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 08:55:17.194 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 09:01:41.012 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 09:01:41.012 * Background saving started by pid 20
+[32mredis_1    |[0m 20:C 11 Jun 09:01:41.017 * DB saved on disk
+[32mredis_1    |[0m 20:C 11 Jun 09:01:41.018 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 09:01:41.112 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 09:06:42.081 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 09:06:42.083 * Background saving started by pid 21
+[32mredis_1    |[0m 21:C 11 Jun 09:06:42.091 * DB saved on disk
+[32mredis_1    |[0m 21:C 11 Jun 09:06:42.093 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 09:06:42.187 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 09:11:43.004 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 09:11:43.005 * Background saving started by pid 22
+[32mredis_1    |[0m 22:C 11 Jun 09:11:43.013 * DB saved on disk
+[32mredis_1    |[0m 22:C 11 Jun 09:11:43.014 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 09:11:43.110 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 09:16:44.041 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 09:16:44.041 * Background saving started by pid 23
+[32mredis_1    |[0m 23:C 11 Jun 09:16:44.051 * DB saved on disk
+[32mredis_1    |[0m 23:C 11 Jun 09:16:44.052 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 09:16:44.146 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 09:21:45.033 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 09:21:45.034 * Background saving started by pid 24
+[32mredis_1    |[0m 24:C 11 Jun 09:21:45.042 * DB saved on disk
+[32mredis_1    |[0m 24:C 11 Jun 09:21:45.043 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 09:21:45.138 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 09:28:24.095 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 09:28:24.095 * Background saving started by pid 25
+[32mredis_1    |[0m 25:C 11 Jun 09:28:24.098 * DB saved on disk
+[32mredis_1    |[0m 25:C 11 Jun 09:28:24.099 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 09:28:24.197 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 09:33:25.047 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 09:33:25.049 * Background saving started by pid 26
+[32mredis_1    |[0m 26:C 11 Jun 09:33:25.055 * DB saved on disk
+[32mredis_1    |[0m 26:C 11 Jun 09:33:25.056 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 09:33:25.150 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:08:44.019 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:08:44.022 * Background saving started by pid 27
+[32mredis_1    |[0m 27:C 11 Jun 10:08:44.074 * DB saved on disk
+[32mredis_1    |[0m 27:C 11 Jun 10:08:44.075 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:08:44.123 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:13:45.073 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:13:45.074 * Background saving started by pid 28
+[32mredis_1    |[0m 28:C 11 Jun 10:13:45.078 * DB saved on disk
+[32mredis_1    |[0m 28:C 11 Jun 10:13:45.078 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:13:45.175 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:18:46.056 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:18:46.058 * Background saving started by pid 29
+[32mredis_1    |[0m 29:C 11 Jun 10:18:46.065 * DB saved on disk
+[32mredis_1    |[0m 29:C 11 Jun 10:18:46.066 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:18:46.159 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:23:47.036 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:23:47.038 * Background saving started by pid 30
+[32mredis_1    |[0m 30:C 11 Jun 10:23:47.043 * DB saved on disk
+[32mredis_1    |[0m 30:C 11 Jun 10:23:47.044 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:23:47.142 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:28:48.084 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:28:48.085 * Background saving started by pid 31
+[32mredis_1    |[0m 31:C 11 Jun 10:28:48.091 * DB saved on disk
+[32mredis_1    |[0m 31:C 11 Jun 10:28:48.092 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:28:48.187 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:33:49.065 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:33:49.066 * Background saving started by pid 32
+[32mredis_1    |[0m 32:C 11 Jun 10:33:49.072 * DB saved on disk
+[32mredis_1    |[0m 32:C 11 Jun 10:33:49.073 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:33:49.169 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:38:50.087 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:38:50.088 * Background saving started by pid 33
+[32mredis_1    |[0m 33:C 11 Jun 10:38:50.091 * DB saved on disk
+[32mredis_1    |[0m 33:C 11 Jun 10:38:50.092 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:38:50.193 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:43:51.045 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:43:51.046 * Background saving started by pid 34
+[32mredis_1    |[0m 34:C 11 Jun 10:43:51.051 * DB saved on disk
+[32mredis_1    |[0m 34:C 11 Jun 10:43:51.053 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:43:51.148 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:48:52.078 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:48:52.079 * Background saving started by pid 35
+[32mredis_1    |[0m 35:C 11 Jun 10:48:52.085 * DB saved on disk
+[32mredis_1    |[0m 35:C 11 Jun 10:48:52.087 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:48:52.184 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:53:53.083 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:53:53.085 * Background saving started by pid 36
+[32mredis_1    |[0m 36:C 11 Jun 10:53:53.092 * DB saved on disk
+[32mredis_1    |[0m 36:C 11 Jun 10:53:53.092 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:53:53.190 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 10:58:54.043 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 10:58:54.044 * Background saving started by pid 37
+[32mredis_1    |[0m 37:C 11 Jun 10:58:54.049 * DB saved on disk
+[32mredis_1    |[0m 37:C 11 Jun 10:58:54.050 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 10:58:54.146 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 11:03:55.023 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 11:03:55.024 * Background saving started by pid 38
+[32mredis_1    |[0m 38:C 11 Jun 11:03:55.031 * DB saved on disk
+[32mredis_1    |[0m 38:C 11 Jun 11:03:55.032 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 11:03:55.130 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 11:08:56.014 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 11:08:56.014 * Background saving started by pid 39
+[32mredis_1    |[0m 39:C 11 Jun 11:08:56.021 * DB saved on disk
+[32mredis_1    |[0m 39:C 11 Jun 11:08:56.022 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 11:08:56.116 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 11:13:57.095 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 11:13:57.096 * Background saving started by pid 40
+[32mredis_1    |[0m 40:C 11 Jun 11:13:57.104 * DB saved on disk
+[32mredis_1    |[0m 40:C 11 Jun 11:13:57.106 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 11:13:57.198 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 11:18:58.048 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 11:18:58.049 * Background saving started by pid 41
+[32mredis_1    |[0m 41:C 11 Jun 11:18:58.056 * DB saved on disk
+[32mredis_1    |[0m 41:C 11 Jun 11:18:58.057 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 11:18:58.151 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 11:23:59.029 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 11:23:59.031 * Background saving started by pid 42
+[32mredis_1    |[0m 42:C 11 Jun 11:23:59.039 * DB saved on disk
+[32mredis_1    |[0m 42:C 11 Jun 11:23:59.040 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 11:23:59.136 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 11:29:00.023 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 11:29:00.024 * Background saving started by pid 43
+[32mredis_1    |[0m 43:C 11 Jun 11:29:00.032 * DB saved on disk
+[32mredis_1    |[0m 43:C 11 Jun 11:29:00.033 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 11:29:00.126 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 11:34:01.020 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 11:34:01.021 * Background saving started by pid 44
+[32mredis_1    |[0m 44:C 11 Jun 11:34:01.027 * DB saved on disk
+[32mredis_1    |[0m 44:C 11 Jun 11:34:01.027 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 11:34:01.124 * Background saving terminated with success
+[32mredis_1    |[0m 1:M 11 Jun 11:39:02.006 * 100 changes in 300 seconds. Saving...
+[32mredis_1    |[0m 1:M 11 Jun 11:39:02.007 * Background saving started by pid 45
+[32mredis_1    |[0m 45:C 11 Jun 11:39:02.014 * DB saved on disk
+[32mredis_1    |[0m 45:C 11 Jun 11:39:02.015 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1    |[0m 1:M 11 Jun 11:39:02.113 * Background saving terminated with success
